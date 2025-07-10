@@ -28,6 +28,8 @@ func processFile(filename string) {
 
 		command := parts[0]
 
+		command = strings.Trim(strings.ToLower(command), " \t\n\r")
+
 		switch command {
 		case "create_parking_lot":
 			if len(parts) != 2 {
